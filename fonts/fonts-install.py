@@ -27,9 +27,11 @@ def init():
 
 # 下载字体文件
 def download_font():
+    global font_url
     for font_name,font_url in font_url.items():
         print('正在下载字体文件:%s' % font_name)
         os.system('wget -P %s %s' % (cache_path,font_url))
+        print("下载%s完成" % font_name)
 
 # 安装字体
 def install_font():
