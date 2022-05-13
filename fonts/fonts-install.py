@@ -50,3 +50,5 @@ def main():
     download_font()
     install_font()
     close_wps()
+
+main()
