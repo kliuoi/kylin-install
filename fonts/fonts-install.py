@@ -18,14 +18,12 @@ def init():
     # 定义缓存文件路径,如果没有则创建
     global cache_path
     cache_path = '/tmp/fonts'
-    if not os.path.exists(cache_path):
-        os.mkdir(cache_path)
+    os.system('mkdir -p %s' % cache_path)
 
     # 定义字体文件安装路径，如果没有则新建
     global font_path
     font_path = '/usr/share/fonts/myfonts'
-    if not os.path.exists(font_path):
-        os.mkdir(font_path)
+    os.system('mkdir -p %s' % font_path)
 
 # 下载字体文件
 def download_font():
